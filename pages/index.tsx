@@ -5,7 +5,7 @@ const notion = new Client({
 });
 const DB_ID = process.env.DATABASE_ID ?? "";
 
-export default function Home(props) {
+export default function Home(props: unknown) {
   return <div>{JSON.stringify(props)}</div>;
 }
 
