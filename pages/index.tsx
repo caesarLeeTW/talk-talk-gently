@@ -10,6 +10,8 @@ export default function Home(props: unknown) {
 }
 
 export async function getStaticProps() {
+  console.log("process.env.NOTION_TOKEN", process.env.NOTION_TOKEN);
+  console.log("process.env.DATABASE_ID", process.env.DATABASE_ID);
   const db = await notion.databases.query({ database_id: DB_ID });
   console.log(db);
   return { props: db };
